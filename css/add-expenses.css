@@ -2,9 +2,8 @@
 
 
 * {
-    /* box-sizing: border-box; */
-    margin: 0;
-    padding: 0;
+    /* margin: 0; */
+    /* padding: 0; */
 }
 
 /* html {
@@ -13,80 +12,88 @@
 
 body {
     font-family: "Source Sans Pro", sans-serif;
+    height: 100vh;
     margin: 0;
     padding: 0;
     background-image: url('/asset/images/imageCop.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-
-header {
-    text-align: center;
     color: white;
-    margin-bottom: 20px;
 }
 
-h1 {
+h2 {
+    font-weight: bolder;
+}
+
+.nav a {
+    text-decoration: none;
+    color: rgb(57, 170, 59);
+
+}
+
+li {
     margin: 5% 0;
 }
 
+
 main {
-    background-color: rgba(184, 95, 17, 0.8);
-    border-radius: 10px;
-    padding: 20px;
+    background-color: rgba(79, 62, 47, 0.8);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: normal;
+    height: 100%;
 }
 
-.formSection {
+section {
+    flex-grow: 2;
+}
+
+img {
+    width: 20%;
+    margin-left: 40px;
+    margin-top: 10%;
+}
+
+ul {
+    list-style: none;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+}
+
+.add-expenses-display {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
     align-items: center;
-    margin-bottom: 20px;
+    margin-left: -20%;
 }
 
-.period {
-    display: flex;
-    margin-bottom: 20px;
+#expenses-amount,
+#expenses-limit-amount {
+    width: 15%;
 }
 
-.incomeExpenses {
-    margin-bottom: 20px;
+
+td,
+th {
+    border: 1px solid;
+    color: rgb(57, 170, 59);
+
 }
 
-div p {
-    font-size: larger;
+select {
+    margin: 0.5%;
+    width: 20%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
 
-.expenses {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-    gap: 2%;
-}
-
-.date,
-.category,
-.amount {
-    margin-bottom: 5%;
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-}
-
-.formGroup {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
 
 input {
-    margin: 2%;
+    margin: 2% 1%;
     padding: 8px;
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -103,8 +110,7 @@ input[type="submit"]:hover {
 }
 
 label {
-    margin: 2%;
     text-align: left;
     font-weight: bold;
-    color: white;
+    color: rgb(57, 170, 59);
 }

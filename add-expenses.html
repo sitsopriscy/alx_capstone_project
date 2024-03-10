@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Expenses</title>
+    <link rel="stylesheet" href="./css/add-expenses.css">
+</head>
+
+<body class="background">
+    <main>
+        <nav>
+            <!-- Navigation -->
+            <div class="nav">
+                <img class="nav-image" src="./asset/images/wallet-1326017_640.jpg" alt="Image">
+                <ul class="nav-list">
+                    <li>
+                        <a href="./dashboard.html" target="_blank">Budget Dashboard</a>
+                    </li>
+                    <li>
+                        <a href="./add-income.html" target="_blank">Add Income</a>
+                    </li>
+                    <li>
+                        <a href="./add-expenses.html" target="_blank">Add Expenses</a>
+                    </li>
+                    <li>
+                        <a href="#export-or-save">Export/Save</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- End of navigation -->
+        </nav>
+        <!-- Add expenses display -->
+        <section class="add-expenses-display">
+            <h2>Add Expenses Limit</h2>
+            <div class="add-expenses-limit-form">
+                <div class="form-group">
+                    <label for="expenses-limit-category">Category</label>
+                    <select name="" id="expenses-limit-category">
+                        <option>Rent and Mortgage Payment</option>
+                        <option>Property Taxes</option>
+                        <option>Homeowners and Renters Insurance</option>
+                        <option>Car Loan Payment</option>
+                        <option>Health Insurance Premium</option>
+                        <option>Cable and Satelite TV Subscription</option>
+                        <option>Internet Service Provider</option>
+                        <option>Cell Phone Plans</option>
+                        <option>Tuition and Education Expenses</option>
+                        <option>Groceries</option>
+                        <option>Utilities(electricity, water, gas)</option>
+                        <option>Transportation Costs</option>
+                        <option>Dining Out and Entertainment</option>
+                        <option>Clothing and Personal Care Items</option>
+                        <option>Home Maintenance and Repairs</option>
+                        <option>Travel and Vacation</option>
+                        <option>Gifts and Celebrations</option>
+                        <option>Recreation and Hobbies</option>
+                        <option>Savings</option>
+                    </select>
+                    <label for="expenses-limit-amount">Amount</label>
+                    <input type="number" id="expenses-limit-amount">
+                </div>
+            </div>
+            <!-- Complete button -->
+            <div>
+                <input type="submit" value="Complete">
+            </div>
+
+            <h2>Expenses Limit List</h2>
+            <div class="expenses-limit-bottom-display">
+                <table class="expenses-limit-list">
+                    <tr>
+                        <th>Category</th>
+                        <th>Amount</th>
+                    </tr>
+                </table>
+            </div>
+
+            <h2>Add Expenses</h2>
+            <div class="add-expenses-form">
+                <div class="form-group">
+                    <label for="date">Date</label>
+                    <input type="date" id="expenses-date">
+
+                    <label for="category">Category</label>
+                    <select name="" id="expenses-category">
+                        <option>Rent and Mortgage Payment</option>
+                        <option>Property Taxes</option>
+                        <option>Homeowners and Renters Insurance</option>
+                        <option>Car Loan Payment</option>
+                        <option>Health Insurance Premium</option>
+                        <option>Cable and Satelite TV Subscription</option>
+                        <option>Internet Service Provider</option>
+                        <option>Cell Phone Plans</option>
+                        <option>Tuition and Education Expenses</option>
+                        <option>Groceries</option>
+                        <option>Utilities(electricity, water, gas)</option>
+                        <option>Transportation Costs</option>
+                        <option>Dining Out and Entertainment</option>
+                        <option>Clothing and Personal Care Items</option>
+                        <option>Home Maintenance and Repairs</option>
+                        <option>Travel and Vacation</option>
+                        <option>Gifts and Celebrations</option>
+                        <option>Recreation and Hobbies</option>
+                        <option>Savings</option>
+                    </select>
+                    <label for="amount">Amount</label>
+                    <input type="number" id="expenses-amount">
+                </div>
+            </div>
+            <!-- Complete button -->
+            <div>
+                <input type="submit" value="Complete">
+            </div>
+            <div class="expenses-bottom-display">
+                <h2>Expenses List and Update</h2>
+                <table class="expenses-list">
+                    <tr>
+                        <th>Date</th>
+                        <th>Category</th>
+                        <th>Amount</th>
+                    </tr>
+                </table>
+            </div>
+        </section>
+        <!-- End of expenses display -->
+    </main>
+</body>
+
+</html>

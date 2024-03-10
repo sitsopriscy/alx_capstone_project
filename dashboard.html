@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget Dashboard</title>
+    <link rel="stylesheet" href="./css/dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <main>
+        <nav class="nav">
+            <!-- Navigation -->
+
+            <!-- Hamburger Icon -->
+            <!-- <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                    <i class="fa fa-bars"></i>
+                </a> -->
+            <div id="myLinks">
+                <img class="nav-image" src="./asset/images/wallet-1326017_640.jpg" alt="Image">
+                <ul>
+                    <li>
+                        <a href="./dashboard.html" target="_blank">Budget Dashboard</a>
+                    </li>
+                    <li>
+                        <a href="./add-income.html" target="_blank">Add Income</a>
+                    </li>
+                    <li>
+                        <a href="./add-expenses.html" target="_blank">Add Expenses</a>
+                    </li>
+                    <li>
+                        <a href="#export-or-save">Export/Save</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!-- End of navigation -->
+
+        <!-- Budget bashboard display section -->
+        <section class="dashboard-display">
+            <h1>Budget Dashboard</h1>
+            <div class="dashboard-top-display">
+                <div class="summary">
+                    <h4>Summary</h4>
+                    <div class="summary-info">
+                        <h5>Total Income: 0</h5>
+                        <h5>Total Expenses: 0</h5>
+                        <h5>Balance: 0</h5>
+                    </div>
+                </div>
+
+                <div class="income-vs-expenses">
+                    <h4>Income vs Expenses & Savings</h4>
+                    <div class="pie-chart">
+
+                    </div>
+                </div>
+                <div class="expenses-limit">
+                    <h4> Expenses Limit</h4>
+                    <div class="pie-chart">
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="dashboard-bottom-display">
+                <h2>Current Expenses</h2>
+                <table class="current-expenses">
+                    <tr>
+                        <th>Date</th>
+                        <th>Category</th>
+                        <th>Amount</th>
+                    </tr>
+                </table>
+            </div>
+        </section>
+        <!-- End of dashboard display section -->
+    </main>
+    <script src="./asset/JS/dashboard.js"></script>
+</body>
+
+</html>

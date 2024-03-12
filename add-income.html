@@ -52,22 +52,35 @@
             </div>
             <!-- Complete button -->
             <div>
-                <input type="submit" value="Complete">
+                <button id="complete-button">Complete</button>
             </div>
 
             <div class="income-bottom-display">
                 <h2>Income List and Update</h2>
                 <table class="income-list">
-                    <tr>
-                        <th>Date</th>
-                        <th>Category</th>
-                        <th>Amount</th>
-                    </tr>
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Category</th>
+                            <th>Amount</th>
+                            <th>Action</th> <!-- Added a new column for action buttons -->
+                        </tr>
+                    </thead>
+                    <tbody id="income-list-table-body">
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td><strong>Total Amount</strong></td>
+                            <td id="income-total-amount"></td>
+                            <td></td> <!-- Added an empty column for consistency -->
+                        </tr>
+                    </tfoot>
                 </table>
             </div>
         </section>
         <!-- End of income display -->
     </main>
+    <script src="./asset/JS/add-income.js"></script>
 </body>
 
 </html>

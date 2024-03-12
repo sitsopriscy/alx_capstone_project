@@ -64,21 +64,32 @@
             </div>
             <!-- Complete button -->
             <div>
-                <input type="submit" value="Complete">
+                <button id="add-expenses-limit-btn">Complete</button>
             </div>
-
             <h2>Expenses Limit List</h2>
             <div class="expenses-limit-bottom-display">
                 <table class="expenses-limit-list">
-                    <tr>
-                        <th>Category</th>
-                        <th>Amount</th>
-                    </tr>
+                    <thead>
+                        <tr>
+                            <th>Category</th>
+                            <th>Amount</th>
+                            <th>Action</th> <!-- Added a new column for action buttons -->
+                        </tr>
+                    </thead>
+                    <tbody id="expenses-limit-table-body">
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td><strong>Total Amount</strong></td>
+                            <td id="expenses-limit-total-amount"></td>
+                            <td></td> <!-- Added an empty column for consistency -->
+                        </tr>
+                    </tfoot>
                 </table>
             </div>
 
             <h2>Add Expenses</h2>
-            <div class="add-expenses-form">
+            <div class="add-expenses-form expenses" id="expenses">
                 <div class="form-group">
                     <label for="date">Date</label>
                     <input type="date" id="expenses-date">
@@ -111,21 +122,34 @@
             </div>
             <!-- Complete button -->
             <div>
-                <input type="submit" value="Complete">
+                <button id="add-expenses-btn">Complete</button>
             </div>
+            <h2>Expenses List and Update</h2>
             <div class="expenses-bottom-display">
-                <h2>Expenses List and Update</h2>
                 <table class="expenses-list">
-                    <tr>
-                        <th>Date</th>
-                        <th>Category</th>
-                        <th>Amount</th>
-                    </tr>
+                    <thead>
+                        <tr>
+                            <th>Category</th>
+                            <th>Amount</th>
+                            <th>Action</th> <!-- Added a new column for action buttons -->
+                        </tr>
+                    </thead>
+                    <tbody id="expenses-table-body">
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td><strong>Total Amount</strong></td>
+                            <td id="expenses-total-amount"></td>
+                            <td></td> <!-- Added an empty column for consistency -->
+                        </tr>
+                    </tfoot>
                 </table>
             </div>
         </section>
         <!-- End of expenses display -->
     </main>
+    <script src="./asset/JS/expensesLimit.js"></script>
+    <script src="./asset/JS/expenses.js"></script>
 </body>
 
 </html>

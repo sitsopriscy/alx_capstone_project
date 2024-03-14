@@ -3,25 +3,29 @@
 
 body {
     font-family: "Source Sans Pro", sans-serif;
-    height: 100vh;
+    /* height: 100vh; */
+    /* width: 100vw; */
     margin: 0;
     padding: 0;
     background-image: url('/asset/images/image5.jpg');
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
     background-size: cover;
     background-position: center;
+    width: 100%;
     background-repeat: no-repeat;
-    color: black;
     font-weight: bolder;
 }
 
-h2 {
+h2,
+h3 {
     font-weight: bolder;
 }
 
 .nav a {
     text-decoration: none;
-    color: black;
-
+    color: rgba(0, 0, 0, 0.500)
 }
 
 li {
@@ -35,11 +39,12 @@ main {
     flex-direction: row;
     justify-content: space-around;
     align-items: normal;
-    height: 100%;
 }
 
 section {
     flex-grow: 2;
+    margin-bottom: 10%;
+    width: 85%;
 }
 
 img {
@@ -54,13 +59,24 @@ ul {
     flex-direction: column;
 }
 
-.add-expenses-display {
+/* .add-expenses-display {
     display: flex;
     flex-direction: column;
     justify-content: start;
     align-items: center;
     margin-left: -20%;
+} */
+
+.expeneses-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 40%;
+    gap: 20px;
+    position: fixed;
+    margin-top: 1%;
 }
+
 
 #expenses-amount,
 #expenses-limit-amount {
@@ -71,7 +87,6 @@ ul {
 td,
 th {
     border: 1px solid;
-    color: white;
 
 }
 
@@ -81,6 +96,7 @@ select {
     padding: 8px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    background-color: rgb(211, 211, 211);
 }
 
 
@@ -89,11 +105,16 @@ input {
     padding: 8px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    background-color: rgb(211, 211, 211);
+}
+
+.btn {
+    margin-left: 25%;
+    margin-bottom: 5%;
 }
 
 button {
     background-color: #4CAF50;
-    color: white;
     cursor: pointer;
     border-radius: 5px;
     border: 1px solid #ccc;
@@ -106,18 +127,13 @@ button:hover {
 label {
     text-align: left;
     font-weight: bold;
-    color: white;
 }
 
-
-/* styles.css */
-.expenses {
-    /* Default styles */
+.expenses-limit-bottom-display {
+    margin-bottom: 10%;
 }
 
 .exceeded-limit {
     background-color: red;
-    color: white;
     font-weight: bold;
-    
 }

@@ -43,8 +43,10 @@ main {
 
 section {
     flex-grow: 2;
-    margin-bottom: 10%;
+    margin-bottom: 30%;
     width: 85%;
+    margin-top: 2%;
+
 }
 
 img {
@@ -111,6 +113,13 @@ h5 span {
     width: 85%;
 }
 
+.dashboard-bottom-display {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 80%;
+}
+
 .summary {
     width: 30%;
 }
@@ -118,4 +127,80 @@ h5 span {
 td,
 th {
     border: 1px solid;
+}
+
+
+
+
+
+/* responsive */
+
+@media only screen and (min-width: 1282px) {
+    main {
+        font-size: xx-large;
+    }
+    section {
+        margin-bottom: 100%;
+    }
+}
+
+@media only screen and (min-width:769px) and (max-width:1281px) {
+    main {
+        font-size: xx-large;
+    }
+
+    .dashboard-display {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .dashboard-top-display {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .summary {
+        width: 100%;
+    }
+
+    .summary-info {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    section {
+        margin-bottom: 100%;
+    }
+
+}
+
+
+@media only screen and (max-width:768px) {
+    main {
+        background-color: rgba(185, 159, 137, 0.8);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: normal;
+        align-items: center;
+        width: 100%;
+        font-size: large;
+    }
+
+
+    .dashboard-display {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .dashboard-top-display {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
 }

@@ -2,8 +2,8 @@ const limitCategory = document.querySelector('#expenses-limit-category')
 const limitAmount = document.querySelector('#expenses-limit-amount')
 const addExpensesLimitBtn = document.querySelector('#add-expenses-limit-btn')
 const expensesLimitTableBody = document.querySelector('#expenses-limit-table-body')
-const totalLimitAmountDisplay = document.querySelector('#expenses-limit-total-amount') // Define totalLimitAmountDisplay
-let expensesLimit = JSON.parse(localStorage.getItem('expensesLimit')) || [] // Load from localStorage or initialize as empty array
+const totalLimitAmountDisplay = document.querySelector('#expenses-limit-total-amount')
+let expensesLimit = JSON.parse(localStorage.getItem('expensesLimit')) || [] 
 
 // Load saved expenses limit data when the page loads
 window.addEventListener('load', function () {
@@ -11,13 +11,13 @@ window.addEventListener('load', function () {
 })
 
 addExpensesLimitBtn.addEventListener('click', function () {
-    const limitCategoryValue = limitCategory.value.trim() // Trim to remove leading and trailing whitespace
-    const limitAmountValue = limitAmount.value.trim() // Trim to remove leading and trailing whitespace
+    const limitCategoryValue = limitCategory.value.trim()
+    const limitAmountValue = limitAmount.value.trim()
 
     // Check if both input fields are empty
     if (!limitCategoryValue || !limitAmountValue) {
         alert('Please enter both category and amount.')
-        return // Exit the function early if input fields are empty
+        return
     }
 
     const addExpensesLimit = {
@@ -28,10 +28,8 @@ addExpensesLimitBtn.addEventListener('click', function () {
     expensesLimit.push(addExpensesLimit)
     updateExpensesLimitTable()
 
-    // Save expenses limit data to localStorage
     localStorage.setItem('expensesLimit', JSON.stringify(expensesLimit))
 
-    // Clear input fields
     limitCategory.value = ''
     limitAmount.value = ''
 
@@ -40,10 +38,8 @@ addExpensesLimitBtn.addEventListener('click', function () {
 
 // Function to update the expenses limit table
 function updateExpensesLimitTable() {
-    // Clear the existing table rows
     expensesLimitTableBody.innerHTML = ''
 
-    // Use a Map to aggregate total amounts for each category
     const categoriesMap = new Map()
 
     // Iterate through the expensesLimit array and aggregate total amounts for each category
@@ -67,9 +63,8 @@ function updateExpensesLimitTable() {
         const limitDeleteButton = document.createElement('button')
 
         limitCategoryCell.textContent = category
-        limitAmountCell.textContent = amount.toFixed(2) // Display the total amount for the category
+        limitAmountCell.textContent = amount.toFixed(2)
 
-        // Create edit button
         limitEditButton.textContent = 'Edit'
         limitEditButton.addEventListener('click', function () {
             limitCategory.value = category
@@ -91,16 +86,12 @@ function updateExpensesLimitTable() {
                         }
                     })
 
-                    // Update the table
                     updateExpensesLimitTable()
 
-                    // Save updated expenses limit data to localStorage
                     localStorage.setItem('expensesLimit', JSON.stringify(expensesLimit))
 
-                    // Revert the button text back to "Edit"
                     limitEditButton.textContent = 'Edit'
 
-                    // Remove the event listener to prevent multiple event bindings
                     limitEditButton.removeEventListener('click', saveEdit)
                 } else {
                     alert('Please enter a valid amount.')
@@ -108,14 +99,12 @@ function updateExpensesLimitTable() {
             })
         })
 
-        // Create delete button
         limitDeleteButton.textContent = 'Delete'
         limitDeleteButton.addEventListener('click', function () {
             // Remove the category from the array and the table
             expensesLimit = expensesLimit.filter(expense => expense.limitCategory !== category)
             updateExpensesLimitTable()
 
-            // Save updated expenses limit data to localStorage
             localStorage.setItem('expensesLimit', JSON.stringify(expensesLimit))
         })
 
@@ -174,7 +163,7 @@ addExpensesBtn.addEventListener('click', function () {
     expenses.push(newExpense)
     updateExpensesTable()
 
-    localStorage.setItem('expenses', JSON.stringify(expenses)) // Save expenses data to localStorage
+    localStorage.setItem('expenses', JSON.stringify(expenses))
 
     expensesCategoryInput.value = ''
     expensesAmountInput.value = ''
@@ -183,7 +172,7 @@ addExpensesBtn.addEventListener('click', function () {
 function updateExpensesTable() {
     expensesTableBody.innerHTML = ''
 
-    const categoriesMap = new Map() // Use a map to store categories and their corresponding amounts
+    const categoriesMap = new Map()
 
     expenses.forEach(expense => {
         if (categoriesMap.has(expense.category)) {
@@ -205,7 +194,7 @@ function updateExpensesTable() {
         const expensesDeleteButton = document.createElement('button')
 
         expensesCategoryCell.textContent = category
-        expensesAmountCell.textContent = amount.toFixed(2) // Display the total amount for the category
+        expensesAmountCell.textContent = amount.toFixed(2)
 
         expensesEditButton.textContent = 'Edit'
         expensesEditButton.addEventListener('click', function () {
@@ -226,11 +215,10 @@ function updateExpensesTable() {
 
                 updateExpensesTable()
 
-                localStorage.setItem('expenses', JSON.stringify(expenses)) // Save updated expenses data to localStorage
+                localStorage.setItem('expenses', JSON.stringify(expenses))
 
                 expensesEditButton.removeEventListener('click', saveEdit)
             })
-            // Your edit logic here
         })
 
         expensesDeleteButton.textContent = 'Delete'
@@ -238,8 +226,7 @@ function updateExpensesTable() {
             expenses.splice(index, 1)
             updateExpensesTable()
 
-            localStorage.setItem('expenses', JSON.stringify(expenses)) // Save updated expenses data to localStorage
-            // Your delete logic here
+            localStorage.setItem('expenses', JSON.stringify(expenses))
         })
 
         expensesActionCell.appendChild(expensesEditButton)
@@ -251,7 +238,7 @@ function updateExpensesTable() {
         expensesTableBody.appendChild(expensesRow)
     })
 
-    updateTotalAmount() // Update the total amount display if needed
+    updateTotalAmount()
 }
 
 

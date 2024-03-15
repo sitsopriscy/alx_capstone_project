@@ -59,10 +59,8 @@ function updateIncomeTable() {
         categoryCell.textContent = income.category
         amountCell.textContent = income.amount
 
-        // Create edit button
         editButton.textContent = 'Edit'
         editButton.addEventListener('click', function () {
-            // Populate input fields with current values for editing
             dateInput.value = income.date
             categoryInput.value = income.category
 
@@ -95,16 +93,13 @@ function updateIncomeTable() {
         })
 
 
-        // Create delete button
         deleteButton.textContent = 'Delete'
         deleteButton.addEventListener('click', function () {
             // Remove the income from the income list
             incomeList.splice(index, 1)
 
-            // Update the income table
             updateIncomeTable()
 
-            // Save the updated income list to localStorage
             localStorage.setItem('incomeList', JSON.stringify(incomeList))
         })
 

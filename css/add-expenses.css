@@ -2,16 +2,13 @@
 
 
 body {
-    font-family: "Source Sans Pro", sans-serif;
+    font-family: "Roboto", sans-serif;
     /* height: 100vh; */
     /* width: 100vw; */
     margin: 0;
     padding: 0;
-    background-image: url('/asset/images/image2.jpg');
-    /* -webkit-background-size: cover; */
-    /* -moz-background-size: cover; */
-    /* -o-background-size: cover; */
-    background-size: cover;
+    background-image: url('/asset/images/image4.jpg');
+    background-size: 100% 100%;
     background-position: center;
     /* width: 100%; */
     background-repeat: no-repeat;
@@ -114,6 +111,7 @@ input {
 .btn {
     margin-left: 25%;
     margin-bottom: 5%;
+    font-family: "Source Sans 3", sans-serif;
 }
 
 button {
@@ -162,6 +160,10 @@ label {
 /* responsive */
 
 @media only screen and (min-width: 1282px) {
+    body {
+        /* background-size: cover; */
+    }
+
     main {
         font-size: xx-large;
     }
@@ -187,6 +189,9 @@ label {
 }
 
 @media only screen and (min-width:769px) and (max-width:1281px) {
+    body {
+        background-size: cover;
+    }
     main {
         font-size: xx-large;
     }
@@ -229,6 +234,10 @@ label {
 
 
 @media only screen and (max-width:768px) {
+    body {
+        /* background-size: cover; */
+        }
+
     main {
         background-color: rgba(185, 159, 137, 0.8);
         display: flex;

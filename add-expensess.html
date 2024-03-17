@@ -7,7 +7,6 @@
         <title>Add Expenses</title>
         <link rel="stylesheet" href="./css/styles.css">
         <link rel="stylesheet" href="./css/add-expenses.css">
-
     </head>
 
     <body>
@@ -26,6 +25,7 @@
                         Income</a>
                     <a href="./add-expenses.html" target="_parent">Add
                         Expenses</a>
+                    <a href="#export-or-save">Export/Save</a>
                 </nav>
             </div>
             <!-- End of navigation -->
@@ -34,49 +34,50 @@
             <div class="content">
                 <!-- Add expenses display -->
                 <section class="add-expenses-display">
+
                     <h2>Add Expenses Limit</h2>
-                    <div class="form-group">
-                        <label
-                            for="expenses-limit-category">Category</label>
-                        <select name id="expenses-limit-category">
-                            <option>Rent and Mortgage Payment</option>
-                            <option>Property Taxes</option>
-                            <option>Homeowners and Renters
-                                Insurance</option>
-                            <option>Car Loan Payment</option>
-                            <option>Health Insurance Premium</option>
-                            <option>Cable and Satelite TV
-                                Subscription</option>
-                            <option>Internet Service Provider</option>
-                            <option>Cell Phone Plans</option>
-                            <option>Tuition and Education
-                                Expenses</option>
-                            <option>Groceries</option>
-                            <option>Utilities(electricity/water/gas)</option>
-                            <option>Transportation Costs</option>
-                            <option>Dining Out and
-                                Entertainment</option>
-                            <option>Clothing and Personal Care
-                                Items</option>
-                            <option>Home Maintenance and
-                                Repairs</option>
-                            <option>Travel and Vacation</option>
-                            <option>Gifts and Celebrations</option>
-                            <option>Recreation and Hobbies</option>
-                            <option>Savings</option>
-                        </select>
-                        <label for="expenses-limit-amount">Amount</label>
-                        <input type="number" id="expenses-limit-amount">
-                        <button
-                            id="add-expenses-limit-btn">Complete</button>
+                    <div class="add-expenses-limit-form">
+                        <div class="form-group">
+                            <label
+                                for="expenses-limit-category">Category</label>
+                            <select name id="expenses-limit-category">
+                                <option>Rent and Mortgage Payment</option>
+                                <option>Property Taxes</option>
+                                <option>Homeowners and Renters
+                                    Insurance</option>
+                                <option>Car Loan Payment</option>
+                                <option>Health Insurance Premium</option>
+                                <option>Cable and Satelite TV
+                                    Subscription</option>
+                                <option>Internet Service Provider</option>
+                                <option>Cell Phone Plans</option>
+                                <option>Tuition and Education
+                                    Expenses</option>
+                                <option>Groceries</option>
+                                <option>Utilities(electricity, water,
+                                    gas)</option>
+                                <option>Transportation Costs</option>
+                                <option>Dining Out and
+                                    Entertainment</option>
+                                <option>Clothing and Personal Care
+                                    Items</option>
+                                <option>Home Maintenance and
+                                    Repairs</option>
+                                <option>Travel and Vacation</option>
+                                <option>Gifts and Celebrations</option>
+                                <option>Recreation and Hobbies</option>
+                                <option>Savings</option>
+                            </select>
+                            <label for="expenses-limit-amount">Amount</label>
+                            <input type="number" id="expenses-limit-amount">
+                            <button
+                                id="add-expenses-limit-btn">Complete</button>
+                        </div>
                     </div>
 
                     <h3>Expenses Limit List</h3>
                     <div class="expenses-limit-bottom-display">
-                        <button class="download-button"
-                            onclick="downloadRecord('expensesLimit')">CSV</button>
-                        <table class="expenses-limit-list" id="expenseTable"
-                            style="width:100%">
+                        <table class="expenses-limit-list">
                             <thead>
                                 <tr>
                                     <th>Category</th>
@@ -100,7 +101,7 @@
                     <h2>Add Expenses</h2>
                     <div class="add-expenses-form expenses" id="expenses">
                         <div class="form-group">
-                            <label for="expenses-category">Category</label>
+                            <label for="category">Category</label>
                             <select name id="expenses-category">
                                 <option>Rent and Mortgage Payment</option>
                                 <option>Property Taxes</option>
@@ -115,7 +116,8 @@
                                 <option>Tuition and Education
                                     Expenses</option>
                                 <option>Groceries</option>
-                                <option>Utilities(electricity/water/gas)</option>
+                                <option>Utilities(electricity, water,
+                                    gas)</option>
                                 <option>Transportation Costs</option>
                                 <option>Dining Out and
                                     Entertainment</option>
@@ -128,17 +130,14 @@
                                 <option>Recreation and Hobbies</option>
                                 <option>Savings</option>
                             </select>
-                            <label for="expenses-amount">Amount</label>
+                            <label for="amount">Amount</label>
                             <input type="number" id="expenses-amount">
                             <button id="add-expenses-btn">Complete</button>
                         </div>
                     </div>
                     <h3>Expenses List and Update</h3>
                     <div class="expenses-bottom-display">
-                        <button class="download-button"
-                            onclick="downloadRecord('expenses')">CSV</button>
-                        <table id="expenses-list-update" style="width:100%"
-                            class="expenses-list">
+                        <table class="expenses-list">
                             <thead>
                                 <tr>
                                     <th>Category</th>
@@ -153,6 +152,7 @@
                                     <td><strong>Total Amount</strong></td>
                                     <td id="expenses-total-amount"></td>
                                     <td></td>
+                                    <!-- Added an empty column for consistency -->
                                 </tr>
                             </tfoot>
                         </table>
@@ -160,13 +160,10 @@
 
                 </section>
             </div>
-
             <!-- End of expenses display -->
         </main>
         <script src="./JS/expensesLimit.js"></script>
         <script src="./JS/expenses.js"></script>
-        <!-- Starts here -->
-
     </body>
 
 </html>

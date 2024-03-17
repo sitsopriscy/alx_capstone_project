@@ -1,84 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Budget Dashboard</title>
-    <link rel="stylesheet" href="./css/dashboard.css">
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Budget Dashboard</title>
+        <link rel="stylesheet" href="./css/styles.css">
+        <link rel="stylesheet" href="./css/dashboard.css">
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    </head>
 
-<body>
-    <main>
-        <nav class="nav">
-            <!-- Navigation -->
-            <div id="myLinks">
-                <img class="nav-image" src="./asset/images/wallet-1326017_640.jpg" alt="Image">
-                <ul>
-                    <li>
-                        <a href="./dashboard.html" target="_parent">Budget Dashboard</a>
-                    </li>
-                    <li>
-                        <a href="./add-income.html" target="_parent">Add Income</a>
-                    </li>
-                    <li>
-                        <a href="./add-expenses.html" target="_parent">Add Expenses</a>
-                    </li>
-                    <li>
-                        <a href="#export-or-save">Export/Save</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-        <!-- End of navigation -->
-
-        <!-- Budget dashboard display section -->
-        <section class="dashboard-display">
-            <h1>Budget Dashboard</h1>
-            <div class="dashboard-top-display">
-                <div class="summary">
-                    <h4>Summary</h4>
-                    <div class="summary-info">
-                        <h5>Total Income: <span id="total-income">0</span></h5>
-                        <h5>Total Expenses: <span id="total-expenses">0</span></h5>
-                        <h5>Balance: <span id="balance">0</span></h5>
-                    </div>
+    <body>
+        <main>
+            <div class="sidebar">
+                <div class="logo">
+                    <a href="./dashboard.html" target="_parent">
+                        <img src="./asset/images/wallet-1326017_640.jpg"
+                            alt="My wallet" />
+                    </a>
                 </div>
+                <nav>
+                    <a href="./dashboard.html" target="_parent">Budget
+                        Dashboard</a>
+                    <a href="./add-income.html" target="_parent">Add
+                        Income</a>
+                    <a href="./add-expenses.html" target="_parent">Add
+                        Expenses</a>
+                </nav>
+            </div>
+            <!-- End of navigation -->
 
-                <div class="income-vs-expenses">
-                    <h4>Income vs Expenses</h4>
-                    <div class="pie-chart">
-                        <!-- Placeholder for pie chart -->
+            <!-- Budget dashboard display section -->
+            <div class="content">
+                <section class="dashboard-display">
+                    <h1>Budget Dashboard</h1>
+                    <div class="dashboard-top-display">
+                        <div class="summary">
+                            <h4>Summary</h4>
+                            <div class="summary-info">
+                                <h5>Total Income: <span
+                                        id="total-income">0</span></h5>
+                                <h5>Total Expenses: <span
+                                        id="total-expenses">0</span></h5>
+                                <h5>Balance: <span id="balance">0</span></h5>
+                            </div>
+                        </div>
+
+                        <div class="income-vs-expenses">
+                            <h4>Income vs Expenses</h4>
+                            <div class="pie-chart">
+                                <canvas id="incomeVsExpensesChart"></canvas>
+                            </div>
+                        </div>
+                        <div class="expenses-limit">
+                            <h4>Expenses Limit</h4>
+                            <div class="pie-chart">
+                                <canvas
+                                    id="expensesLimitVsActualExpensesChart"></canvas>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="expenses-limit">
-                    <h4>Expenses Limit</h4>
-                    <div class="pie-chart">
-                        <!-- Placeholder for pie chart -->
+
+                    <div class="dashboard-bottom-display">
+                        <h2>Current Expenses</h2>
+                        <table class="current-expenses">
+                            <thead>
+                                <tr>
+                                    <th>Category</th>
+                                    <th>Amount</th>
+                                </tr>
+                            </thead>
+                            <tbody id="current-expenses-body">
+                            </tbody>
+                        </table>
                     </div>
-                </div>
+                </section>
             </div>
 
-            <div class="dashboard-bottom-display">
-                <h2>Current Expenses</h2>
-                <table class="current-expenses">
-                    <thead>
-                        <tr>
-                            <!-- <th>Date</th> -->
-                            <th>Category</th>
-                            <th>Amount</th>
-                        </tr>
-                    </thead>
-                    <tbody id="current-expenses-body">
-                        <!-- Table body for current expenses (to be populated dynamically) -->
-                    </tbody>
-                </table>
-            </div>
-        </section>
-        <!-- End of dashboard display section -->
-    </main>
-    <script src="./asset/JS/dashboard.js"></script>
-</body>
+            <!-- End of dashboard display section -->
+        </main>
+        <script src="./JS/dashboard.js"></script>
+        <script src="./JS/dashboardChart.js"></script>
+    </body>
 
 </html>

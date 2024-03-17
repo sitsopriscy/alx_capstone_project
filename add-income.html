@@ -1,85 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Add Income</title>
-    <link rel="stylesheet" href="./css/add-income.css">
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Add Income</title>
+        <link rel="stylesheet" href="./css/styles.css">
+        <link rel="stylesheet" href="./css/add-income.css">
+    </head>
 
-<body>
-    <main>
-        <nav>
-            <!-- Navigation -->
-            <div class="nav">
-                <img class="nav-image" src="./asset/images/wallet-1326017_640.jpg" alt="Image">
-                <ul class="nav-list">
-                    <li>
-                        <a href="./dashboard.html" target="_parent">Budget Dashboard</a>
-                    </li>
-                    <li>
-                        <a href="./add-income.html" target="_parent">Add Income</a>
-                    </li>
-                    <li>
-                        <a href="./add-expenses.html" target="_parent">Add Expenses</a>
-                    </li>
-                    <li>
-                        <a href="#export-or-save">Export/Save</a>
-                    </li>
-                </ul>
+    <body>
+        <main>
+            <div class="sidebar">
+                <div class="logo">
+                    <a href="./dashboard.html" target="_parent">
+                        <img src="./asset/images/wallet-1326017_640.jpg"
+                            alt="My wallet" />
+                    </a>
+                </div>
+                <nav>
+                    <a href="./dashboard.html" target="_parent">Budget
+                        Dashboard</a>
+                    <a href="./add-income.html" target="_parent">Add
+                        Income</a>
+                    <a href="./add-expenses.html" target="_parent">Add
+                        Expenses</a>
+                </nav>
             </div>
-        </nav>
-        <!-- End of navigation -->
+            <!-- End of navigation -->
 
-        <!-- Add income display -->
-        <section class="add-income-display">
-            <h2>Add Income</h2>
-            <div class="form-group">
-                <label for="date">Date</label>
-                <input type="date" id="income-date">
-                <label for="category">Category</label>
-                <select name="" id="income-category">
-                    <option>Salary</option>
-                    <option>Investment</option>
-                    <option>Gifts</option>
-                    <option>Selling Items</option>
-                    <option>Social Security</option>
-                </select>
-                <label for="amount">Amount</label>
-                <input type="number" id="income-amount">
-            </div>
-            <!-- Complete button -->
-            <div class="btn">
-                <button id="complete-button">Complete</button>
+            <!-- Add income display -->
+            <div class="content">
+                <section class="add-income-display">
+                    <h2>Add Income</h2>
+                    <div class="form-group">
+                        <label for="date">Date</label>
+                        <input type="date" id="income-date">
+                        <label for="category">Category</label>
+                        <select name id="income-category">
+                            <option>Salary</option>
+                            <option>Investment</option>
+                            <option>Gifts</option>
+                            <option>Selling Items</option>
+                            <option>Social Security</option>
+                        </select>
+                        <label for="amount">Amount</label>
+                        <input type="number" id="income-amount">
+                        <button id="complete-button">Complete</button>
+                    </div>
+                    <!-- Complete button -->
+
+                    <div class="income-bottom-display">
+                        <h3>Income List and Update</h3>
+                        <table class="income-list">
+                            <thead>
+                                <tr>
+                                    <th class="idate">Date</th>
+                                    <th>Category</th>
+                                    <th>Amount</th>
+                                    <th>Action</th>
+                                    <!-- Added a new column for action buttons -->
+                                </tr>
+                            </thead>
+                            <tbody id="income-list-table-body">
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <td><strong>Total Amount</strong></td>
+                                    <td id="income-total-amount"></td>
+                                    <td></td>
+                                    <!-- Added an empty column for consistency -->
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                </section>
             </div>
 
-            <div class="income-bottom-display">
-                <h3>Income List and Update</h3>
-                <table class="income-list">
-                    <thead>
-                        <tr>
-                            <th class="idate">Date</th>
-                            <th>Category</th>
-                            <th>Amount</th>
-                            <th>Action</th> <!-- Added a new column for action buttons -->
-                        </tr>
-                    </thead>
-                    <tbody id="income-list-table-body">
-                    </tbody>
-                    <tfoot>
-                        <tr>
-                            <td><strong>Total Amount</strong></td>
-                            <td id="income-total-amount"></td>
-                            <td></td> <!-- Added an empty column for consistency -->
-                        </tr>
-                    </tfoot>
-                </table>
-            </div>
-        </section>
-        <!-- End of income display -->
-    </main>
-    <script src="./asset/JS/add-income.js"></script>
-</body>
+            <!-- End of income display -->
+        </main>
+        <script src="./JS/add-income.js"></script>
+    </body>
 
 </html>

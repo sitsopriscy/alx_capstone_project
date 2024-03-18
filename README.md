@@ -18,7 +18,7 @@ Users can add, edit, or delete transactions, specifying details such as amount, 
 Transactions can be categorized into different expense types (e.g., groceries, utilities, entertainment) for better organization.
 
 - #### *Income Tracking:*
-Users can input their income sources to get a comprehensive overview of their financial inflow and outflow.
+Users can input their income sources(category) to get a comprehensive overview of their financial inflow and outflow.
 
 - #### *Reports and Visualizations:*
 The application generates reports and visualizations, allowing users to analyze their spending patterns and make informed financial decisions.

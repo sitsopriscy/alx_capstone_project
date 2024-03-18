@@ -124,3 +124,5 @@ function updateTotalAmount() {
     })
     incomeTotalAmountDisplay.textContent = totalAmount.toFixed(2)
 }
+
+updateIncomeTable()

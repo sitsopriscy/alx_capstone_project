@@ -59,14 +59,14 @@ const config = {
         labels: labels,
         datasets: [
             {
-                label: "limit Amount",
+                label: "Limit Amount",
                 data: limitAmountData,
                 backgroundColor: "rgba(54, 162, 235, 0.5)", // Blue color with opacity
                 borderColor: "rgba(54, 162, 235, 1)", // Blue color
                 borderWidth: 1,
             },
             {
-                label: "Expenses",
+                label: "Expenses Amount",
                 data: expenseAmount,
                 backgroundColor: "rgba(255, 99, 132, 0.5)", // Red color with opacity
                 borderColor: "rgba(255, 99, 132, 1)", // Red color

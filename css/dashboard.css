@@ -1,6 +1,6 @@
 body {
     font-family: "Roboto", sans-serif;
-    background-image: url('/asset/images/image3.jpg');
+    /* background-image: url('/asset/images/image3.jpg'); */
     background-size: 100% 100%;
     background-position: center;
     background-repeat: no-repeat;
@@ -9,7 +9,7 @@ body {
 
 main {
     width: 100%;
-    background-color: rgba(185, 159, 137, 0.8);
+    /* background-color: rgba(185, 159, 137, 0.8); */
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -70,7 +70,12 @@ th {
 /* responsive */
 
 @media only screen and (min-width: 1282px) {
+    body{
+        background-image: url('/asset/images/image3.jpg');
+    }
+    
     main {
+        background-color: rgba(185, 159, 137, 0.8);
         font-size: xx-large;
     }
 
@@ -80,8 +85,13 @@ th {
 }
 
 @media only screen and (min-width:769px) and (max-width:1281px) {
+    body{
+        background-image: url('/asset/images/image3.jpg');
+    }
+
     main {
         font-size: xx-large;
+        background-color: rgba(185, 159, 137, 0.8);
     }
 
     .dashboard-display {
@@ -94,6 +104,8 @@ th {
         display: flex;
         flex-direction: column;
         justify-content: center;
+        /* text-align: start; */
+
     }
 
     .summary {
@@ -104,6 +116,29 @@ th {
         display: flex;
         justify-content: space-between;
         width: 100%;
+        margin-top: -5%;
+    }
+
+    .summary h4 {
+        margin-bottom: 0;
+        text-align: center;
+        margin-right: 20%;
+    }
+
+    .income-vs-expenses {
+        width: 200px;
+        margin-left: 20%;
+    }
+
+    .income-vs-expenses h4 {
+        text-align: center;
+    }
+
+
+    .expenses-limit {
+        height: 200px;
+        width: 300px;
+        margin-bottom: 15%;
     }
 
     section {
@@ -119,7 +154,6 @@ th {
     }
 
     main {
-        background-color: rgba(185, 159, 137, 0.8);
         display: flex;
         flex-direction: column;
         justify-content: space-around;
@@ -134,13 +168,47 @@ th {
         display: flex;
         flex-direction: column;
         justify-content: center;
+        text-align: center;
     }
 
     .dashboard-top-display {
         display: flex;
         flex-direction: column;
         justify-content: center;
+        height: 80%;
+        text-align: center;
     }
+
+  
+    .summary {
+        width: 100%;
+    }
+
+    .summary-info {
+        display: flex;
+        flex-direction: column;
+        justify-content:center ;
+        text-align: center;
+        width: 100%;
+        }
+
+    .summary h4 {
+        margin-bottom: 0;
+        text-align: center;
+        margin-right: 20%;
+    }
+
+
+    .income-vs-expenses {
+        width: 200px;
+    }
+
+    .expenses-limit {
+        height: 200px;
+        width: 300px;
+        margin-bottom: 50%;
+    }
+
 
     section {
         margin-bottom: 30%;

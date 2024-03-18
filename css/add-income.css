@@ -9,7 +9,7 @@ body {
 
 main {
     width: 100%;
-    background-color: rgba(185, 159, 137, 0.8);
+    /* background-color: rgba(185, 159, 137, 0.8); */
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -86,6 +86,7 @@ label {
 @media only screen and (min-width: 1282px) {
     main {
         font-size: xx-large;
+        background-color: rgba(185, 159, 137, 0.8);
     }
 
     section {
@@ -96,6 +97,7 @@ label {
 @media only screen and (min-width:769px) and (max-width:1281px) {
     main {
         font-size: xx-large;
+        background-color: rgba(185, 159, 137, 0.8);
     }
 
     .add-income-display {
@@ -133,7 +135,7 @@ label {
     }
 
     main {
-        background-color: rgba(185, 159, 137, 0.8);
+        /* background-color: rgba(185, 159, 137, 0.8); */
         display: flex;
         flex-direction: column;
         justify-content: space-around;
@@ -151,6 +153,10 @@ label {
     .form-group {
         display: flex;
         flex-direction: column;
+    }
+
+    label{
+        color: black;
     }
 
     img {

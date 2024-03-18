@@ -1,6 +1,6 @@
 body {
     font-family: "Roboto", sans-serif;
-    background-image: url('/asset/images/image4.jpg');
+    /* background-image: url('/asset/images/image4.jpg'); */
     background-size: 100% 100%;
     background-position: center;
     background-repeat: no-repeat;
@@ -9,7 +9,7 @@ body {
 
 main {
     width: 100%;
-    background-color: rgba(185, 159, 137, 0.8);
+    /* background-color: rgba(185, 159, 137, 0.8); */
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -69,9 +69,13 @@ label {
 /* responsive */
 
 @media only screen and (min-width: 1282px) {
+    body {
+        background-image: url('/asset/images/image4.jpg');
+    }
 
     main {
         font-size: xx-large;
+        background-color: rgba(185, 159, 137, 0.8);
     }
 
     #expenses-category,
@@ -91,11 +95,13 @@ label {
 
 @media only screen and (min-width:769px) and (max-width:1281px) {
     body {
+        background-image: url('/asset/images/image4.jpg');
         background-size: cover;
     }
 
     main {
         font-size: xx-large;
+        background-color: rgba(185, 159, 137, 0.8);
     }
 
     .add-expenses-display {
@@ -126,9 +132,8 @@ label {
 
 
 @media only screen and (max-width:768px) {
-
     main {
-        background-color: rgba(185, 159, 137, 0.8);
+        /* background-color: rgba(185, 159, 137, 0.8); */
         display: flex;
         flex-direction: column;
         justify-content: space-around;
@@ -143,6 +148,10 @@ label {
         flex-direction: column;
     }
 
+    label {
+        color: black;
+    }
+
     img {
         width: 30%;
     }
@@ -155,9 +164,5 @@ label {
     .btn {
         margin-left: 0;
         margin-bottom: 5%;
-    }
-
-    .idate {
-        display: none;
     }
 }
